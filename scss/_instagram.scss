@@ -9,12 +9,6 @@
 }
 
 #shutter {
-    opacity: 0;
-    animation: shutter;
-    animation-delay: 0.3s;
-}
-
-#flash_2 {
      position: absolute;
      bottom: 50%;
      right: 50%;
@@ -23,19 +17,12 @@
      height: 50px;
      background-color: rgba($color: #ffffff, $alpha: 0);
      border-radius: 50px;
-    //  opacity: 0;
     animation: shutter;
     animation-delay: 0.3s;
-}
-
-#flash {
-    animation: flash;
-    animation-delay: 0.2719s;
-}
+} 
 
 #camera-body,
 #flash,
-#flash_2,
 #shutter,
 #first-wing,
 #lens {

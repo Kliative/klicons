@@ -1,5 +1,5 @@
 
-$prime-color: #0c0015;
+$prime-color: #1E0035;
 $icon-box-background-color: rgba(255, 255, 255, 0.2);
 body,
 html {
@@ -20,6 +20,41 @@ html {
     bottom: 50%;
     right: 50%;
     transform: translate(50%, 50%);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 8px 8px rgba(0,0,0,0.11), 
+              0 16px 16px rgba(0,0,0,0.11), 
+              0 32px 32px rgba(0,0,0,0.11);
+    svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        path {
+            position: absolute;
+        }
+    }
+}
+.icon-wrapper-row {
+    position: absolute;
+    display: flex;
+    height: 100px;
+    width: 100%;
+      bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+.icon-wrapper-r {
+    position: relative;
+    background-color: $prime-color;
+    width:100px;
+    height: 100px;
+    padding: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.4);
+    float: left;
+    margin: 0 auto;
+  
     box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
               0 2px 2px rgba(0,0,0,0.11), 
               0 4px 4px rgba(0,0,0,0.11), 

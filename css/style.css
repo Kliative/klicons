@@ -8,7 +8,7 @@ html {
 
 .icon-wrapper {
   position: absolute;
-  background-color: #0c0015;
+  background-color: #1E0035;
   width: 100px;
   height: 100px;
   padding: 40px;
@@ -24,6 +24,141 @@ html {
     overflow: visible; }
     .icon-wrapper svg path {
       position: absolute; }
+
+.icon-wrapper-row {
+  position: absolute;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%); }
+
+.icon-wrapper-r {
+  position: relative;
+  background-color: #1E0035;
+  width: 100px;
+  height: 100px;
+  padding: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  float: left;
+  margin: 0 auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11); }
+  .icon-wrapper-r svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible; }
+    .icon-wrapper-r svg path {
+      position: absolute; }
+
+#first-chevron-right {
+  animation: chervon-right;
+  animation-delay: .2s; }
+
+#second-chevron-right {
+  animation: chervon-right;
+  animation-delay: .25s; }
+
+#first-chevron-right,
+#second-chevron-right {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+@keyframes chervon-right {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(-1px); }
+  75% {
+    transform: translateX(3px); }
+  100% {
+    transform: translateX(0px); } }
+
+#first-chevron-left {
+  animation: chervon-left;
+  animation-delay: .2s; }
+
+#second-chevron-left {
+  animation: chervon-left;
+  animation-delay: .25s; }
+
+#first-chevron-left,
+#second-chevron-left {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+@keyframes chervon-left {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(1px); }
+  75% {
+    transform: translateX(-3px); }
+  100% {
+    transform: translateX(0px); } }
+
+#first-chevron-up {
+  animation: chervon-up;
+  animation-delay: .2s; }
+
+#second-chevron-up {
+  animation: chervon-up;
+  animation-delay: .25s; }
+
+#first-chevron-up,
+#second-chevron-up {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+@keyframes chervon-up {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(1px); }
+  75% {
+    transform: translateY(-3px); }
+  100% {
+    transform: translateY(0px); } }
+
+#first-chevron-down {
+  animation: chervon-up;
+  animation-delay: .2s; }
+
+#second-chevron-down {
+  animation: chervon-up;
+  animation-delay: .25s; }
+
+#first-chevron-down,
+#second-chevron-down {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running; }
+
+@keyframes chervon-down {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-1px); }
+  75% {
+    transform: translateY(3px); }
+  100% {
+    transform: translateY(0px); } }
 
 #bird-body {
   animation: body-grow;
@@ -115,11 +250,6 @@ html {
   animation-delay: .2s; }
 
 #shutter {
-  opacity: 0;
-  animation: shutter;
-  animation-delay: 0.3s; }
-
-#flash_2 {
   position: absolute;
   bottom: 50%;
   right: 50%;
@@ -131,13 +261,8 @@ html {
   animation: shutter;
   animation-delay: 0.3s; }
 
-#flash {
-  animation: flash;
-  animation-delay: 0.2719s; }
-
 #camera-body,
 #flash,
-#flash_2,
 #shutter,
 #first-wing,
 #lens {

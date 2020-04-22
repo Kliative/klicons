@@ -1,0 +1,149 @@
+
+#first-chevron-right {
+    animation: chervon-right;
+    animation-delay: .2s;
+}
+#second-chevron-right {
+    animation: chervon-right;
+    animation-delay: .25s;
+}
+
+
+#first-chevron-right,
+#second-chevron-right  {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes chervon-right {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-1px);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// Left
+#first-chevron-left {
+    animation: chervon-left;
+    animation-delay: .2s;
+}
+#second-chevron-left {
+    animation: chervon-left;
+    animation-delay: .25s;
+}
+
+
+#first-chevron-left,
+#second-chevron-left  {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes chervon-left {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(1px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+// Up
+#first-chevron-up {
+    animation: chervon-up;
+    animation-delay: .2s;
+}
+#second-chevron-up {
+    animation: chervon-up;
+    animation-delay: .25s;
+}
+
+
+#first-chevron-up,
+#second-chevron-up  {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes chervon-up {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(1px);
+    }
+    75% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+// Up
+#first-chevron-down {
+    animation: chervon-up;
+    animation-delay: .2s;
+}
+#second-chevron-down {
+    animation: chervon-up;
+    animation-delay: .25s;
+}
+
+
+#first-chevron-down,
+#second-chevron-down  {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes chervon-down {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-1px);
+    }
+    75% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
