@@ -1,0 +1,126 @@
+#camera-body {
+    animation: camera-body;
+    animation-delay: 0.3s;
+}
+
+#lens {
+    animation: lens;
+    animation-delay: .2s;
+}
+
+#shutter {
+    opacity: 0;
+    animation: shutter;
+    animation-delay: 0.3s;
+}
+
+#flash_2 {
+     position: absolute;
+     bottom: 50%;
+     right: 50%;
+     transform: translate(50%, 50%);
+     width: 50px;
+     height: 50px;
+     background-color: rgba($color: #ffffff, $alpha: 0);
+     border-radius: 50px;
+    //  opacity: 0;
+    animation: shutter;
+    animation-delay: 0.3s;
+}
+
+#flash {
+    animation: flash;
+    animation-delay: 0.2719s;
+}
+
+#camera-body,
+#flash,
+#flash_2,
+#shutter,
+#first-wing,
+#lens {
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 1.2) translate(0px, -6px);
+    }
+    75% {
+        transform: scale(1, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes shutter {
+    0% {
+        background-color: rgba($color: #ffffff, $alpha: 0);
+    }
+    70% {
+        background-color: rgba($color: #ffffff, $alpha: 0);
+    }
+    75% {
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
+    }
+    80% {
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+      
+    }
+    85% {
+        background-color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+    90% {
+        background-color: rgba($color: #ffffff, $alpha: 0);
+    }
+    100% {
+        background-color: rgba($color: #ffffff, $alpha: 0);
+    }
+}
+
+@keyframes lens {
+    0% {
+        transform: translate3d(0px,0px,0px);
+    }
+    70% {
+        transform: translate3d(0px,-4px,0px);
+    }
+    80% {
+        transform: translate3d(0px,-5px,0px);
+    }
+    90% {
+        transform: translate3d(0px,-2px,0px);
+    }
+    100% {
+        transform: translate3d(0px,0px,0px);
+    }
+}
+
+
+@keyframes camera-body {
+    0% {
+        transform: translate3d(0px,0px,0px);
+    }
+    70% {
+        transform: translate3d(0px,0px,0px);
+    }
+    80% {
+        transform: translate3d(0px,5px,0px);
+    }
+    90% {
+        transform: translate3d(0px,-15px,0px);
+    }
+    100% {
+        transform: translate3d(0px,0px,0px);
+    }
+}

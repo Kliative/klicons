@@ -1,0 +1,14 @@
+{
+    "injectChanges": false,
+    "files": [
+        ". /**/*.{html,htm,css,js,scss} ",
+        "./scss/*.scss",
+        "./css/*.css"
+    ],
+    "watchOptions": {
+        "ignored": "node_modules"
+    },
+    "server": {
+        "baseDir": "./"
+    }
+}
