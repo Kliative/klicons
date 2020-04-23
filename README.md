@@ -2,4 +2,4 @@
 
 Css animated Icons
 
-> Might make in angular just for developement
+> Might make in angular just for developement purpose
