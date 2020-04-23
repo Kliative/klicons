@@ -1,0 +1,69 @@
+
+#rotate-ccw {
+    animation: rotate-ccw-ani;
+    animation-delay: 2.2s;
+    animation-duration: 2s;
+}
+#rotate-cw {
+    animation: rotate-cw-ani;
+    animation-delay: 2.2s;
+    animation-duration: 2s;
+}
+#arrow-ccw {
+    stroke-dasharray: 12;
+    stroke-dashoffset: 12;
+    animation: rotate-arrow-ani;
+    animation-delay: 1.75s;
+    animation-duration: 2s;
+}
+
+#rotate-line-ccw {
+    stroke-dasharray: 72;
+    stroke-dashoffset: 82;
+    animation: rotate-line-ani;
+    animation-delay: .5s;
+    animation-duration: 2s;
+}
+
+#rotate-line-ccw,
+#rotate-ccw,
+#arrow-ccw {  
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes rotate-ccw-ani {
+
+    100% {
+        transform: rotate(-360deg);
+
+    }
+}
+
+@keyframes rotate-cw-ani {
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+@keyframes rotate-arrow-ani {
+    100% {
+    
+        stroke-dasharray: 24;
+        stroke-dashoffset: 6;
+    }
+}
+
+
+@keyframes rotate-line-ani {
+
+    100% {
+        stroke-dasharray: 133;
+
+    }
+}
