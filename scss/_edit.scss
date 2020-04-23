@@ -1,0 +1,52 @@
+
+// Edit
+
+#pen {
+    animation: pen-draw;
+    animation-delay: 0.25s;
+    animation-duration: 5s;
+}
+
+#line {
+    stroke-dasharray: 27;
+    stroke-dashoffset: 82;
+    animation: line-ani;
+    animation-delay: 1.4s;
+    animation-duration: 2s;
+}
+
+#pen,
+#line {  
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes line-ani {
+    0% {
+        stroke-dasharray: 27;
+        stroke-width: 0;
+    }
+    100% {
+        stroke-dasharray: 34;
+        stroke-width: 1.2;
+    }
+}
+
+@keyframes pen-draw {
+
+    25% {
+        transform: translateY(3px);
+    }
+    50% {
+        transform: translateX(20px) translateY(3px);
+    }
+    75% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
