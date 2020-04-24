@@ -4,7 +4,7 @@ Css animated Icons
 
 > Might make in angular just for developement purpose
 
-## Run:
+## Run Commands
 
 > npm run scss
 
