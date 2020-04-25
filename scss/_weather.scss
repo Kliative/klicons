@@ -1,0 +1,259 @@
+// Rain
+#rain-cloud {
+    animation: cloud-shake;
+    animation-delay: 0.2s;
+}
+#first-rain {
+    
+    animation: rain-drop;
+    animation-delay: 0.3s;
+}
+#second-rain {
+    animation: rain-drop;
+    animation-delay: 0.1s;
+}
+#third-rain {
+    animation: rain-drop;
+    animation-delay: 0.4s;
+}
+// Heavy rain
+#heavy-rain-cloud {
+    animation: heavy-cloud-shake;
+    animation-delay: 0.7s;
+}
+#first-heavy-rain {
+    
+    animation: heavy-rain-drop;
+    animation-delay: 0.3s;
+}
+#second-heavy-rain {
+    animation: heavy-rain-drop;
+    animation-delay: 0.1s;
+}
+#third-heavy-rain {
+    animation: heavy-rain-drop;
+    animation-delay: 0.4s;
+}
+// lightning
+
+#lightning-cloud {
+    animation: lightning-cloud-shake;
+    animation-delay: 0s;
+}
+#lightning-bolt {
+    animation: lightning-bolt;
+    animation-delay: 0.4s;
+}
+#first-lightning-rain {
+    
+    animation: lightning-rain-drop;
+    animation-delay: 0.3s;
+}
+#second-lightning-rain {
+    animation: lightning-rain-drop;
+    animation-delay: 0.1s;
+}
+#third-lightning-rain {
+    animation: lightning-rain-drop;
+    animation-delay: 0.4s;
+}
+//Snow
+#first-snow {
+    
+    animation: snow-fall;
+    animation-delay: 0.3s;
+}
+#second-snow {
+    animation: snow-fall;
+    animation-delay: 0.1s;
+}
+#third-snow {
+    animation: snow-fall;
+    animation-delay: 0.4s;
+}
+// All
+#first-heavy-rain,
+#second-heavy-rain,
+#third-heavy-rain,
+#first-rain,
+#second-rain,
+#third-rain,
+#first-snow,
+#second-snow,
+#third-snow,
+#first-lightning-rain,
+#second-lightning-rain,
+#third-lightning-rain {
+    stroke-dasharray: 8px;
+    stroke-dashoffset: 8px;
+}
+#heavy-rain-cloud,
+#first-heavy-rain,
+#second-heavy-rain,
+#third-heavy-rain,
+#first-lightning-rain,
+#second-lightning-rain,
+#third-lightning-rain  {
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+#rain-cloud,
+#first-rain,
+#second-rain,
+#third-rain,
+#first-snow,
+#second-snow,
+#third-snow {
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+#lightning-cloud,
+#lightning-bolt {
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+// Rain
+@keyframes cloud-shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(0px, 1px);
+    }
+    50% {
+        transform: translate(0px, -1px);
+    }
+    75% {
+        transform: translate(0px, 1px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes rain-drop {
+    100% {
+        stroke-dashoffset: -12px;
+    }
+}
+//
+@keyframes snow-fall {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: -12px;
+        opacity: 0;
+    }
+}
+
+// Heavy Rain
+
+@keyframes heavy-cloud-shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(0px, 2px);
+    }
+    50% {
+        transform: translate(-1.5px, -3px) scale(1.1);
+    }
+    75% {
+        transform: translate(0px, 2px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes heavy-rain-drop {
+    100% {
+        stroke-dashoffset: -20px;
+    }
+}
+
+// Heavy Rain
+
+@keyframes lightning-cloud-shake {
+   
+    50% {
+        transform: translate(-1.5px, -3px) scale(1.1);
+    }
+  
+}
+@keyframes lightning-rain-cloud-shake {
+    0% {
+		opacity: 0;
+	}
+
+    50% {
+        transform: translate(-1.5px, -3px) scale(1.1);
+    }
+
+	74% {
+        
+		opacity: 1;
+    }
+
+	100% {
+        opacity: 0;
+	}
+
+  
+  
+}
+@keyframes lightning-bolt {
+    0% {
+		opacity: 1;
+	}
+
+	54% {
+        transform: translate(0px, 0px);
+	}
+
+	74% {
+        stroke-width: .5;
+        transform: translate(-3px, -0.5px) scale(1.2);
+		opacity: 0.02;
+    }
+
+	100% {
+        stroke-width: 2;
+        opacity: 1;
+	}
+
+}
+
+@keyframes lightning-rain-drop {
+    0% {
+		opacity: 1;
+	}
+	74% {
+
+		opacity: 0;
+    }
+
+	100% {
+        
+        stroke-dashoffset: -20px;
+    }
+}

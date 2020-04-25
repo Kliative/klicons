@@ -5,90 +5,38 @@
 @import "edit";
 @import "rotate";
 @import "weather";
-// Rain
-#rain-cloud {
-    animation: cloud-shake;
-    animation-delay: 0.2s;
-}
-#first-rain {
-    
-    animation: rain-drop;
-    animation-delay: 0.3s;
-}
-#second-rain {
-    animation: rain-drop;
-    animation-delay: 0.1s;
-}
-#third-rain {
-    animation: rain-drop;
-    animation-delay: 0.4s;
-}
-// Heavy rain
-#heavy-rain-cloud {
-    animation: heavy-cloud-shake;
-    animation-delay: 0.7s;
-}
-#first-heavy-rain {
-    
-    animation: heavy-rain-drop;
-    animation-delay: 0.3s;
-}
-#second-heavy-rain {
-    animation: heavy-rain-drop;
-    animation-delay: 0.1s;
-}
-#third-heavy-rain {
-    animation: heavy-rain-drop;
-    animation-delay: 0.4s;
-}
-// lightning
+@import "weatherOverCast";
 
-#lightning-cloud {
-    animation: lightning-cloud-shake;
+// Rain
+#overcast-sun {
+    animation: sun-arrive;
     animation-delay: 0s;
 }
-#lightning-bolt {
-    animation: lightning-bolt;
-    animation-delay: 0.4s;
+
+#ray-1 {
+    animation: ray-shine;
+    animation-delay: 1s;
+
+}
+#ray-2 {
+    animation: ray-shine;
+    animation-delay: 1.1s;
+}
+#ray-3 {
+    animation: ray-shine;
+    animation-delay: 1.2s;
+}
+#ray-4 {
+    animation: ray-shine;
+    animation-delay: 1.3s;
 }
 
-// All
-#first-heavy-rain,
-#second-heavy-rain,
-#third-heavy-rain,
-#first-rain,
-#second-rain,
-#third-rain {
-    stroke-dasharray: 8px;
-    stroke-dashoffset: 8px;
-}
-#heavy-rain-cloud,
-#first-heavy-rain,
-#second-heavy-rain,
-#third-heavy-rain {
-    animation-duration: .8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-}
-
-#rain-cloud,
-#first-rain,
-#second-rain,
-#third-rain {
-    animation-duration: 1.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-}
-
-#lightning-cloud,
-#lightning-bolt {
-    animation-duration: 1.2s;
+#overcast-sun,
+#ray-1,
+#ray-2,
+#ray-3,
+#ray-4 {
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     animation-direction: normal;
@@ -97,107 +45,21 @@
 }
 
 // Rain
-@keyframes cloud-shake {
+@keyframes sun-arrive {
     0% {
-        transform: translate(0px, 0px);
+        transform: translateX(-2px);
+        opacity: 0;
     }
-    25% {
-        transform: translate(0px, 1px);
-    }
-    50% {
-        transform: translate(0px, -1px);
-    }
-    75% {
-        transform: translate(0px, 1px);
-    }
+    
     100% {
-        transform: translate(0px, 0px);
+        opacity: 1;
     }
 }
-
-@keyframes rain-drop {
-    100% {
-        stroke-dashoffset: -12px;
-    }
-}
-
-// Heavy Rain
-
-@keyframes heavy-cloud-shake {
+@keyframes ray-shine {
     0% {
-        transform: translate(0px, 0px);
+        stroke: transparent;
     }
-    25% {
-        transform: translate(0px, 2px);
+    90% {
+        stroke: white;
     }
-    50% {
-        transform: translate(-1.5px, -3px) scale(1.1);
-    }
-    75% {
-        transform: translate(0px, 2px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
-}
-
-@keyframes heavy-rain-drop {
-    100% {
-        stroke-dashoffset: -20px;
-    }
-}
-
-// Heavy Rain
-
-@keyframes lightning-cloud-shake {
-   
-    50% {
-        transform: translate(-1.5px, -3px) scale(1.1);
-    }
-  
-}
-
-@keyframes lightning-bolt {
-    0% {
-		opacity: 1;
-	}
-
-	12% {
-		opacity: 1;
-	}
-
-	24% {
-		opacity: 0.56;
-	}
-
-	36% {
-		opacity: 0.02;
-	}
-
-	54% {
-        transform: translate(0px, 0px);
-		opacity: 0.5;
-	}
-
-	74% {
-        transform: translate(-3px, -0.5px) scale(1.2);
-		opacity: 0.02;
-	}
-
-	82% {
-		opacity: 0.6;
-	}
-
-	92% {
-		opacity: 0.01;
-	}
-
-	96% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 1;
-	}
-
 }
