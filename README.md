@@ -10,6 +10,6 @@ Css animated Icons
 
 > lite-server
 
-## Check the out on my CodePen
-
+# Update
+## Weather Icons
 https://codepen.io/kliative/pen/qBOYGEM
