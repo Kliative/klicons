@@ -10,6 +10,11 @@ Css animated Icons
 
 > lite-server
 
-# Update
+# Codepens
+
 ## Weather Icons
 https://codepen.io/kliative/pen/qBOYGEM
+## Instagram
+https://codepen.io/kliative/pen/ZEbVXoz
+## Twitter
+https://codepen.io/kliative/pen/dyYwzao
